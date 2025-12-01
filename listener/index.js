@@ -12,9 +12,9 @@ class EvaWakeListener {
   }
 
   startWebsocketServer() {
-    this.wss = new WebSocketServer({ port: 8080 });
+    this.wss = new WebSocketServer({ port: 6000 });
     this.wss.addListener("listening", (wb) => {
-      console.log("WebSocket Server Listening on ws://localhost:8080");
+      console.log("WebSocket Server Listening on ws://localhost:6000");
     });
 
     this.wss.addListener("connection", (ws) => {
