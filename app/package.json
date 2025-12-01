@@ -30,6 +30,7 @@
     "@types/electron-squirrel-startup": "^1.0.2",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "@types/ws": "^8.18.1",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "electron": "38.4.0",
@@ -42,6 +43,7 @@
     "electron-squirrel-startup": "^1.0.1",
     "node-llama-cpp": "^3.14.2",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "ws": "^8.18.3"
   }
 }

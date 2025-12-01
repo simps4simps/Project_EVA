@@ -8,9 +8,9 @@ class WebsocketManager {
     this.connect(socketUrl || "ws://localhost:8080");
   }
 
-  public static getInstance(): WebsocketManager {
+  public static getInstance(socketUrl?: string): WebsocketManager {
     if (!WebsocketManager.instance) {
-      WebsocketManager.instance = new WebsocketManager();
+      WebsocketManager.instance = new WebsocketManager(socketUrl);
     }
     return WebsocketManager.instance;
   }

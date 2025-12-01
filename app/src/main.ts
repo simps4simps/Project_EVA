@@ -3,6 +3,7 @@ import path, { dirname } from "node:path";
 import started from "electron-squirrel-startup";
 import { fileURLToPath } from "node:url";
 import { initializeLlama } from "./llama/llama";
+import WebsocketManager from "./utils/websocketManager";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -34,6 +35,7 @@ const createWindow = () => {
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
   initializeLlama();
+  const wm = WebsocketManager.getInstance("ws://localhost:8080");
 };
 
 // This method will be called when Electron has finished
