@@ -1,8 +1,41 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/font/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* I want a darker modern color scheme maybe shades of blue purple black and white */
+
+:root {
+  /* Can you add a darker background too pls*/
+  --background-darker-color: #050505;
+  --background-lighter-color: #080808;
+  --background-color: #0f0f0f;
+  --primary-color: #23239f;
+  --secondary-color: #12143f;
+  --accent-color: #7f5af0;
+  --text-color: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
-    sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
