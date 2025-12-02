@@ -46,6 +46,7 @@ export class ChatManager {
     data.chats.push({
       sender,
       message,
+      id: data.chats[data.chats.length - 1].id + 1,
     });
 
     fs.writeFileSync(this.fileURL, JSON.stringify(data));
