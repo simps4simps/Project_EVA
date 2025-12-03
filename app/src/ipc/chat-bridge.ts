@@ -12,6 +12,10 @@ export function registerReadChats() {
 
 export function registerSaveChats() {
   ipcMain.handle("save-chats", async (event, sender: string, message: string) => {
-    ChatManager.getInstance().saveMessage(sender, message);
+    const result = ChatManager.getInstance().saveMessage(sender, message);
+
+    // EVA response handling
+    if (result.message === 200) ipcMain.emit("eva_generate_answer", {}, message);
+    return result;
   });
 }
