@@ -5,7 +5,11 @@ declare global {
     eva: {
       onWake: (cb: () => void) => void;
       readChats: () => Promise<ChatInterface>;
-      saveChats: (sender: string, message: string) => void;
+      saveChats: (
+        sender: string,
+        message: string
+      ) => Promise<{ message: number | string }>;
+      onMessageReady: (cb: () => void) => void;
     };
   }
 }
