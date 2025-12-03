@@ -12,7 +12,7 @@ import { ChatManager } from "./utils/chatManager";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-let intentRouter: IntentRouter | null = null;
+export let intentRouter: IntentRouter | null = null;
 let websocketManager: WebsocketManager | null = null;
 let chatManager: ChatManager | null = null;
 
